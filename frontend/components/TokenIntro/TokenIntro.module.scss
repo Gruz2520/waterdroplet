@@ -1,0 +1,103 @@
+@import '../../styles/globalVariables.scss';
+
+.section {
+  @include section;
+  padding-bottom: 146px;
+  gap: 36px;
+  @media screen and (max-width: 1000px) {
+    padding-bottom: 75px;
+  }
+}
+.wrapper {
+  @include wrapper($white);
+}
+.title {
+  @include titleSmall($blue-main);
+}
+.text {
+  @include text($black);
+  max-width: 700px;
+}
+.textBlueFramed {
+  @include text($blue-main);
+  width: 100%;
+  padding: 34px 20px;
+  border: 2px solid $blue-main;
+  box-sizing: border-box;
+  @media screen and (max-width: 700px) {
+    padding: 16px 12px;
+  }
+}
+.textBlue {
+  display: block;
+  @include text($blue-main);
+}
+.textRed {
+  @include text($red-extra);
+  @include clickable;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+.wrapperInt {
+  width: 100%;
+  padding-right: 129px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  @media screen and (max-width: $breakpointDesktop) {
+    padding-right: 70px;
+  }
+  @media screen and (max-width: $breakpointTablet) {
+    padding-right: $decorBigMob;
+  }
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+}
+.screenshot {
+  width: 491px;
+  height: 491px;
+  background-color: $blue-main;
+  position: relative;
+  flex-shrink: 0;
+  @media screen and (max-width: $breakpointDesktop) {
+    width: 350px;
+    height: 350px;
+  }
+  @media screen and (max-width: $breakpointTablet) {
+    width: 302px;
+    height: 302px;
+  }
+  @media screen and (max-width: 389px) {
+    width: 230px;
+    height: 230px;
+  }
+  &::after {
+    content: '';
+    @include decorSizeL;
+    position: absolute;
+    background-color: $red-extra;
+    right: -$decorBig;
+    bottom: -$decorBig;
+    @media screen and (max-width: $breakpointDesktop) {
+      right: -$decorBigTab;
+      bottom: -$decorBigTab;
+    }
+    @media screen and (max-width: $breakpointTablet) {
+      right: -$decorBigMob;
+      bottom: -$decorBigMob;
+    }
+  }
+}
+.accent {
+  color: #8c3b9b;
+  text-align: left;
+}

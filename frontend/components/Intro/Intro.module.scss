@@ -1,0 +1,33 @@
+@import '../../styles/globalVariables.scss';
+.section {
+  @include section;
+  color: $black;
+}
+.wrapper {
+  @include wrapper($white);
+}
+.text {
+  margin: 241px 0 120px;
+  font-family: $font-family;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 60px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  max-width: 1195px;
+  color: $black;
+  text-transform: uppercase;
+  @media (max-width: 1000px) {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 150px 0 100px;
+  }
+  @media (max-width: 800px) {
+    margin: 100px 8px 70px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 76px 0;
+  }
+}

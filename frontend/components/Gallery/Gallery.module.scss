@@ -1,0 +1,102 @@
+@import '../../styles/globalVariables.scss';
+
+.gallery {
+  @include section;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 889px;
+  gap: 25px;
+  color: #fff;
+  aspect-ratio: 1.4815;
+  box-sizing: border-box;
+  @media screen and (max-width: 1400px) {
+    grid-template-columns: 1fr 625px;
+  }
+  @media (max-width: 1050px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 800px;
+  }
+  @media screen and (max-width: $breakpointTablet) {
+    grid-template-rows: 300px 800px;
+  }
+  @media screen and (max-width: $breakpointMobile) {
+    grid-template-rows: 250px 450px;
+  }
+  @media screen and (max-width: 460px) {
+    grid-template-rows: 200px 350px;
+  }
+}
+.wrapper {
+  @include wrapper($blue-main);
+}
+.column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 57px;
+  position: relative;
+  box-sizing: border-box;
+  &:first-of-type {
+    @media (max-width: $breakpointTablet) {
+      padding: 0 10px;
+      gap: 42px;
+    }
+  }
+  &:last-of-type {
+    padding: 127px 0 62px 0;
+    @media screen and (max-width: 1050px) {
+      padding: 0;
+      align-items: center;
+    }
+  }
+}
+.text {
+  font-family: $font-family;
+  padding-right: 10px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 500px;
+  padding-bottom: 95px;
+  @media (max-width: 1300px) {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 400px;
+  }
+  @media (max-width: 1150px) {
+    max-width: 300px;
+  }
+  @media screen and (max-width: 1050px) {
+    padding-bottom: 17px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  @media (max-width: 800px) {
+    max-width: 301px;
+    padding: 0;
+  }
+  @media (max-width: 500px) {
+    max-width: 201px;
+  }
+}
+.title {
+  @include title($white);
+  margin-left: 6px;
+  padding-top: 68px;
+  @media screen and (max-width: 1050px) {
+    padding-top: 45px;
+  }
+  @media (max-width: 800px) {
+    margin: 0;
+    padding-top: 25px;
+  }
+}

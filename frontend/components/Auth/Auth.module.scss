@@ -1,0 +1,113 @@
+@import '../../styles/globalVariables.scss';
+.auth {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: calc(100vh - 97px);
+  @media screen and (max-width: 1500px) {
+    min-height: calc(100vh - 79px);
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    min-height: calc(100vh - 89px);
+  }
+}
+.containerBlue {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue-main;
+}
+.containerWhite {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+}
+.formWrapper {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+}
+.form {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.8);
+  @media (max-width: 600px) {
+    padding: 30px 10px;
+  }
+}
+.modeSelector {
+  max-width: 620px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.modeBtn {
+  width: 100%;
+  padding: 19px 0;
+}
+.inputContainer {
+  max-width: 620px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 94px;
+  margin: 67px 0 50px;
+  @media (max-width: 1000px) {
+    gap: 61px;
+  }
+  @media (max-width: 600px) {
+    gap: 31px;
+    margin: 53px 0 62px;
+  }
+}
+.input {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: none;
+  border-bottom: 2px solid $blue-main;
+  outline: none;
+  background-color: transparent;
+  &::placeholder {
+    color: #c7c7c7;
+  }
+}
+.btnBlock {
+  max-width: 620px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 91fr 59fr;
+  gap: 20px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.btnWeak {
+  @include button(weak);
+}
+.deactivated {
+  pointer-events: none;
+}
+.btnStrong {
+  @include button(strong);
+}
+.btnSmallText {
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: none;
+}

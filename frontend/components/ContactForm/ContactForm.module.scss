@@ -1,0 +1,326 @@
+@import '../../styles/globalVariables.scss';
+.wrapper {
+  @include wrapper($blue-main);
+}
+.section {
+  @include section;
+  color: $white;
+  padding-top: 101px;
+  padding-bottom: 216px;
+  position: relative;
+  @media (max-width: 1200px) {
+    padding-bottom: 116px;
+  }
+  @media (max-width: 800px) {
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  @media (max-width: 600px) {
+    padding-top: 25px;
+    padding-bottom: 39px;
+  }
+}
+.title {
+  @include title($white);
+}
+.columns {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 669px 464px;
+  @media (max-width: 1350px) {
+    grid-template-columns: 669px 300px;
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  width: 100%;
+  margin-bottom: 41px;
+  display: grid;
+  column-gap: 48px;
+  row-gap: 60px;
+  grid-template-areas:
+    'n n n n n n n p p p p p p p p'
+    'm m m m m m m m m m m m m m m'
+    'b b b b b - - - - - - - - - -';
+  @media (max-width: 800px) {
+    grid-template-areas:
+      'n n'
+      'p p'
+      'm m'
+      'b -';
+    row-gap: 19px;
+  }
+}
+
+.formTitle {
+  margin: 177px 0 80px 0;
+  font-family: $font-family;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 73px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $white;
+  text-transform: uppercase;
+  @media (max-width: 1300px) {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 127px 0 80px 0;
+  }
+  @media (max-width: 800px) {
+    margin: 100px 0 60px 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @media (max-width: 500px) {
+    margin: 52px 0 40px 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.inputName {
+  grid-area: n;
+  position: relative;
+}
+.inputPhone {
+  grid-area: p;
+  position: relative;
+}
+.inputMessage {
+  grid-area: m;
+  position: relative;
+  @media (max-width: 800px) {
+    margin: 46px 0 21px;
+  }
+}
+.btn {
+  @include clickable;
+  margin: 0;
+  padding: 0;
+  grid-area: b;
+  display: flex;
+  align-items: flex-start;
+  background-color: transparent;
+  border: none;
+  gap: 7px;
+
+  &_disabled {
+    pointer-events: none;
+    opacity: 40%;
+    p {
+      // color: rgb(164, 157, 157);
+    }
+  }
+}
+.btnText {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-family: $font-family;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-align: left;
+  border-bottom: 2px solid $white;
+  text-transform: uppercase;
+  color: $white;
+  @media (max-width: 800px) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.img {
+  width: 48px;
+  position: relative;
+  height: 48px;
+  @media (max-width: 800px) {
+    width: 33px;
+    height: 33px;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  @media (max-width: 600px) {
+    gap: 4px;
+  }
+}
+.contactTitle {
+  margin: 0;
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.contactData {
+  margin: 0;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contacts {
+  gap: 77px;
+  align-self: flex-end;
+  @media (max-width: 600px) {
+    gap: 18px;
+  }
+}
+.socialLink {
+  @include clickable;
+}
+.inputError {
+  border-bottom-color: red;
+}
+.input {
+  @include input($white);
+}
+.error {
+  color: red;
+  font-size: 16px;
+  line-height: 1;
+  margin: 10px 0 0;
+  left: 0;
+  min-height: 42px;
+  margin-bottom: -42px;
+  @media screen and (max-width: 600px) {
+    margin-top: 5px;
+    min-height: 33px;
+    margin-bottom: -33px;
+    font-size: 14px;
+  }
+}
+.decor1 {
+  @include decorSizeL;
+  position: absolute;
+  background-color: $red-extra;
+  right: 800px;
+  top: 300px;
+  &::after {
+    content: '';
+    background-color: #fff;
+    @include decorSizeS;
+    position: absolute;
+    left: -$decorSmall;
+    bottom: -$decorSmall;
+    @media screen and (max-width: $breakpointDesktop) {
+      left: -$decorSmallTab;
+      bottom: -$decorSmallTab;
+    }
+    @media screen and (max-width: $breakpointTablet) {
+      left: -$decorSmallMob;
+      bottom: -$decorSmallMob;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    right: 600px;
+  }
+  @media screen and (max-width: 1200px) {
+    right: 400px;
+  }
+  @media screen and (max-width: 1200px) {
+    right: 250px;
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+.decor2 {
+  @include decorSizeL;
+  position: absolute;
+  background-color: #fff;
+  right: 550px;
+  top: 150px;
+  &::after {
+    @include decorSizeS;
+    content: '';
+    background-color: $red-extra;
+    position: absolute;
+    right: -$decorSmall;
+    bottom: -$decorSmall;
+    @media screen and (max-width: $breakpointDesktop) {
+      right: -$decorSmallTab;
+      bottom: -$decorSmallTab;
+    }
+    @media screen and (max-width: $breakpointTablet) {
+      right: -$decorSmallMob;
+      bottom: -$decorSmallMob;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    right: 350px;
+  }
+  @media screen and (max-width: 1200px) {
+    right: 250px;
+    top: 100px;
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+.decor3 {
+  @include decorSizeL;
+  position: absolute;
+  background-color: #fff;
+  right: 200px;
+  top: 300px;
+  &::before {
+    @include decorSizeS;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    right: -$decorSmall;
+    top: -$decorSmall;
+    @media screen and (max-width: $breakpointDesktop) {
+      right: -$decorSmallTab;
+      top: -$decorSmallTab;
+    }
+    @media screen and (max-width: $breakpointTablet) {
+      right: -$decorSmallMob;
+      top: -$decorSmallMob;
+    }
+  }
+  &::after {
+    @include decorSizeL;
+    content: '';
+    background-color: $red-extra;
+    position: absolute;
+    right: -$decorBig;
+    bottom: -$decorBig;
+    @media screen and (max-width: $breakpointDesktop) {
+      right: -$decorBigTab;
+      bottom: -$decorBigTab;
+    }
+    @media screen and (max-width: $breakpointTablet) {
+      right: -$decorBigMob;
+      bottom: -$decorBigMob;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    right: 100px;
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}

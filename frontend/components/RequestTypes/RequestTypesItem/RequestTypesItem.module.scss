@@ -1,0 +1,91 @@
+@import '../../../styles/globalVariables.scss';
+
+.table {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  grid-template-areas:
+    'th th'
+    'tReqH tResH'
+    'tReqB tResB'
+    'tf tf ';
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'th'
+      'tReqH'
+      'tReqB'
+      'tResH'
+      'tResB'
+      'tf';
+  }
+}
+.th {
+  @include cell;
+  @include outlined($blue-main);
+  text-align: center;
+  grid-area: th;
+  display: block;
+  @media screen and (max-width: $breakpointTablet) {
+    text-align-last: left;
+  }
+}
+.tReqH {
+  @include cell;
+  grid-area: tReqH;
+}
+.tResH {
+  @include cell;
+  grid-area: tResH;
+}
+.tReqB {
+  @include cell;
+  padding-top: 37px;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 20px;
+  grid-area: tReqB;
+  background-color: $codeHighlightBkg;
+  @media screen and (max-width: 1000px) {
+    padding-top: 40px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-top: 27px;
+  }
+}
+
+.tResB {
+  @include cell;
+  padding-top: 40px;
+  border-radius: 20px;
+  grid-area: tResB;
+  background-color: $codeHighlightBkg;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media screen and (max-width: 1000px) {
+    padding-top: 40px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-top: 27px;
+  }
+}
+.tf {
+  @include cell;
+  @include outlined($blue-main);
+  display: block;
+  margin-top: 22px;
+  grid-area: tf;
+}
+.accent {
+  color: #8c3b9b;
+  text-align: left;
+}
+
+.langTag {
+  @include langTag;
+}
+.tfRow {
+  margin: 0;
+}

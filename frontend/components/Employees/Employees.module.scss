@@ -1,0 +1,196 @@
+@import '../../styles/globalVariables.scss';
+
+.section {
+  @include section;
+  padding-top: 105px;
+  padding-bottom: 80px;
+  flex-direction: column;
+  position: relative;
+  gap: 87px;
+  @media screen and (max-width: $breakpointMobile) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    gap: 40px;
+  }
+}
+.downloadBtn {
+  @include clickable;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+  color: $blue-extra;
+  background-color: transparent;
+  border: none;
+  @media (max-width: $breakpointMobile) {
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+  }
+}
+.btnContainer {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  max-width: 740px;
+  @media screen and (max-width: 340px) {
+    gap: 10px;
+  }
+}
+.link {
+  @include button(weak);
+  @media screen and (max-width: 340px) {
+    font-size: 12px;
+  }
+}
+.blocked {
+  @include button(strong);
+  pointer-events: none;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 20px;
+  @media screen and (max-width: $breakpointTablet) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.colSecond {
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+.extended {
+  display: flex;
+}
+.label {
+  width: 100%;
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color: #c7c7c7;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.input {
+  width: 100%;
+  @include text($black);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid $blue-main;
+  &:focus {
+    border-bottom-width: 3px;
+  }
+}
+// .disabledInput {
+//   border-bottom-color: $red-extra;
+// }
+@mixin btn($type) {
+  @include button($type);
+  transform: scale(62%);
+  width: 162%;
+  margin-top: -13px;
+  margin-bottom: -13px;
+  @media screen and (max-width: $breakpointMobile) {
+    transform: none;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.buttonSolid {
+  @include btn(strong);
+}
+.buttonTrans {
+  @include btn(weak);
+}
+.disabledBtn {
+  pointer-events: none;
+  background-color: #c7c7c7;
+  border: none;
+  opacity: 90%;
+}
+.error {
+  margin: 0;
+  bottom: -30px;
+  min-height: 28px;
+  color: $red-extra;
+  position: absolute;
+  left: 0;
+  font: Arial;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+}
+.spoiler {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  @media screen and (max-width: 700px) {
+    display: flex;
+  }
+  &:hover .extendBtn {
+    opacity: 50%;
+  }
+}
+.spoilerHead {
+  @include text($blue-main);
+  text-transform: uppercase;
+}
+.extendBtn {
+  @include clickable;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.icon {
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: $blue-main;
+  border-radius: 1px;
+  transition: transform 0.5s ease;
+}
+
+.rotated {
+  transform: rotate(-90deg);
+}
+.formContainer {
+  @include outlined($blue-main);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

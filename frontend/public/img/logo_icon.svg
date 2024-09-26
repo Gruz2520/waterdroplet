@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c01a5c;
+      }
+
+      .cls-2 {
+        fill: #286ae2;
+      }
+
+      .cls-3 {
+        fill: #1e5edc;
+      }
+
+      .cls-4 {
+        fill: #f70847;
+      }
+
+      .cls-5 {
+        fill: #ed063c;
+      }
+
+      .cls-6 {
+        fill: url(#_Безымянный_градиент_20);
+      }
+
+      .cls-7 {
+        fill: #9f2977;
+      }
+
+      .cls-8 {
+        fill: #713b9d;
+      }
+
+      .cls-9 {
+        fill: #1960e0;
+      }
+
+      .cls-10 {
+        fill: #0c6de2;
+      }
+
+      .cls-11 {
+        fill: #ff296b;
+      }
+
+      .cls-12 {
+        fill: #494dbb;
+      }
+
+      .cls-13 {
+        fill: #3052ce;
+      }
+
+      .cls-14 {
+        fill: #2b59d3;
+      }
+
+      .cls-15 {
+        fill: #8c3b9b;
+      }
+
+      .cls-16 {
+        fill: red;
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент_20" data-name="Безымянный градиент 20" x1="540" y1="90" x2="540" y2="990" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1960e0"/>
+      <stop offset="1" stop-color="#ed063c"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-6" points="802.5 615 802.5 540 765 540 765 465 727.5 465 727.5 390 690 390 690 315 652.5 315 652.5 240 615 240 615 165 577.5 165 577.5 90 502.5 90 502.5 165 465 165 465 240 427.5 240 427.5 315 390 315 390 390 352.5 390 352.5 465 315 465 315 540 277.5 540 277.5 615 240 615 240 690 240 765 277.5 765 277.5 840 315 840 315 915 390 915 427.5 915 427.5 990 502.5 990 577.5 990 652.5 990 652.5 915 690 915 765 915 765 840 802.5 840 802.5 765 840 765 840 690 840 615 802.5 615"/>
+  <rect class="cls-2" x="502.5" y="90" width="75" height="75"/>
+  <rect class="cls-9" x="465" y="165" width="75" height="75"/>
+  <rect class="cls-9" x="427.5" y="240" width="75" height="75"/>
+  <rect class="cls-3" x="390" y="315" width="75" height="75"/>
+  <rect class="cls-14" x="352.5" y="390" width="75" height="75"/>
+  <rect class="cls-12" x="427.5" y="390" width="75" height="75"/>
+  <rect class="cls-13" x="502.5" y="390" width="75" height="75"/>
+  <rect class="cls-14" x="577.5" y="390" width="75" height="75"/>
+  <rect class="cls-13" x="652.5" y="390" width="75" height="75"/>
+  <rect class="cls-4" x="427.5" y="915" width="75" height="75"/>
+  <rect class="cls-16" x="502.5" y="915" width="75" height="75"/>
+  <rect class="cls-5" x="577.5" y="915" width="75" height="75"/>
+  <rect class="cls-12" x="690" y="465" width="75" height="75"/>
+  <rect class="cls-8" x="615" y="465" width="75" height="75"/>
+  <rect class="cls-3" x="540" y="465" width="75" height="75"/>
+  <rect class="cls-12" x="465" y="465" width="75" height="75"/>
+  <rect class="cls-15" x="390" y="465" width="75" height="75"/>
+  <rect class="cls-12" x="315" y="465" width="75" height="75"/>
+  <rect class="cls-5" x="690" y="840" width="75" height="75"/>
+  <rect class="cls-4" x="615" y="840" width="75" height="75"/>
+  <rect class="cls-1" x="540" y="840" width="75" height="75"/>
+  <rect class="cls-11" x="465" y="840" width="75" height="75"/>
+  <rect class="cls-5" x="390" y="840" width="75" height="75"/>
+  <rect class="cls-4" x="315" y="840" width="75" height="75"/>
+  <rect class="cls-15" x="277.5" y="540" width="75" height="75"/>
+  <rect class="cls-8" x="240" y="615" width="75" height="75"/>
+  <rect class="cls-7" x="240" y="690" width="75" height="75"/>
+  <rect class="cls-1" x="315" y="690" width="75" height="75"/>
+  <rect class="cls-4" x="390" y="690" width="75" height="75"/>
+  <rect class="cls-15" x="465" y="690" width="75" height="75"/>
+  <rect class="cls-8" x="540" y="690" width="75" height="75"/>
+  <rect class="cls-5" x="615" y="690" width="75" height="75"/>
+  <rect class="cls-7" x="690" y="690" width="75" height="75"/>
+  <rect class="cls-5" x="765" y="690" width="75" height="75"/>
+  <rect class="cls-12" x="315" y="615" width="75" height="75"/>
+  <rect class="cls-7" x="390" y="615" width="75" height="75"/>
+  <rect class="cls-12" x="465" y="615" width="75" height="75"/>
+  <rect class="cls-1" x="540" y="615" width="75" height="75"/>
+  <rect class="cls-12" x="615" y="615" width="75" height="75"/>
+  <rect class="cls-1" x="690" y="615" width="75" height="75"/>
+  <rect class="cls-15" x="765" y="615" width="75" height="75"/>
+  <rect class="cls-12" x="352.5" y="540" width="75" height="75"/>
+  <rect class="cls-14" x="427.5" y="540" width="75" height="75"/>
+  <rect class="cls-8" x="502.5" y="540" width="75" height="75"/>
+  <rect class="cls-12" x="577.5" y="540" width="75" height="75"/>
+  <rect class="cls-15" x="652.5" y="540" width="75" height="75"/>
+  <rect class="cls-7" x="727.5" y="540" width="75" height="75"/>
+  <rect class="cls-5" x="277.5" y="765" width="75" height="75"/>
+  <rect class="cls-1" x="352.5" y="765" width="75" height="75"/>
+  <rect class="cls-7" x="427.5" y="765" width="75" height="75"/>
+  <rect class="cls-1" x="502.5" y="765" width="75" height="75"/>
+  <rect class="cls-7" x="577.5" y="765" width="75" height="75"/>
+  <rect class="cls-4" x="652.5" y="765" width="75" height="75"/>
+  <rect class="cls-1" x="727.5" y="765" width="75" height="75"/>
+  <rect class="cls-14" x="465" y="315" width="75" height="75"/>
+  <rect class="cls-10" x="540" y="315" width="75" height="75"/>
+  <rect class="cls-3" x="615" y="315" width="75" height="75"/>
+  <rect class="cls-10" x="502.5" y="240" width="75" height="75"/>
+  <rect class="cls-3" x="577.5" y="240" width="75" height="75"/>
+  <rect class="cls-2" x="540" y="165" width="75" height="75"/>
+</svg>

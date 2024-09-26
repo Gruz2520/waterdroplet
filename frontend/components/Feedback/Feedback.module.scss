@@ -1,0 +1,37 @@
+@import '../../styles/globalVariables.scss';
+.title {
+  @include title($blue-main);
+  margin-bottom: 69px;
+  @media (max-width: 800px) {
+    margin-bottom: 31px;
+  }
+}
+
+.feedback {
+  @include section;
+  color: #fff;
+  padding-top: 90px;
+  padding-bottom: 184px;
+  @media (max-width: 800px) {
+    padding-top: 40px;
+    padding-bottom: 79px;
+  }
+  @media (max-width: 600px) {
+    padding-top: 13px;
+    padding-bottom: 40px;
+  }
+}
+.wrapper {
+  @include wrapper($white);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 98px;
+  @media (max-width: 800px) {
+    gap: 60px;
+  }
+  @media (max-width: 600px) {
+    gap: 25px;
+  }
+}

@@ -1,0 +1,143 @@
+@import '../../styles/globalVariables.scss';
+.wrapper {
+  @include wrapper($blue-main);
+}
+.about {
+  @include section;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #fff;
+  padding-top: 35px;
+  padding-bottom: 164px;
+  @media (max-width: 1000px) {
+    padding-bottom: 180px;
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 800px) {
+    padding-top: 27px;
+    padding-bottom: 84px;
+  }
+}
+.editable {
+  @include clickable;
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -1.5em;
+    content: 'редактировать';
+    font-size: 1em;
+    color: rgb(244, 1, 1);
+    overflow: hidden;
+    text-decoration: underline;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 61px;
+  height: 100%;
+  @media (max-width: 1200px) {
+    gap: 40px;
+  }
+}
+.title {
+  @include title($white);
+  @media (max-width: 600px) {
+    font-size: 48px;
+    line-height: 59px;
+  }
+}
+.pictContainer {
+  @include photoRule;
+  width: 80%;
+  max-width: 491px;
+  aspect-ratio: 1;
+  position: relative;
+  margin-bottom: $decorBig;
+  background-color: $white;
+  @media (max-width: 1200px) {
+    margin-bottom: $decorBigTab;
+  }
+}
+.description {
+  margin: 0;
+  margin-top: 19px;
+  max-width: 624px;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: transparent;
+  color: $white;
+  @media (max-width: 1200px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  @media (max-width: 800px) {
+    width: 80%;
+  }
+}
+.factsContainer {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media (max-width: 1200px) {
+    padding: 0 16px;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &:nth-of-type(2n) {
+    align-self: flex-end;
+    @media (max-width: 450px) {
+      align-self: unset;
+    }
+  }
+}
+.factTitle {
+  margin: 0;
+  font-family: $font-family;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0em;
+  text-align: left;
+  line-height: 1;
+  @media (max-width: 1200px) {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+.factText {
+  max-width: 430px;
+  margin: 0;
+  font-family: $font-family;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0em;
+  text-align: left;
+  @media (max-width: 1200px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @media (max-width: 600px) {
+    font-size: 14px;
+    max-width: 269px;
+  }
+}

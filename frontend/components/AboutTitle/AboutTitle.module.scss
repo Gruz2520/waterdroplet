@@ -1,0 +1,124 @@
+@import '../../styles/globalVariables.scss';
+.wrapper {
+  @include wrapper($white);
+}
+.section {
+  @include section;
+  padding-top: 270px;
+  padding-bottom: 415px;
+  @media (max-width: 1200px) {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+  @media (max-width: 800px) {
+    padding-top: 80px;
+    padding-bottom: 160px;
+  }
+}
+.title {
+  @include title($blue-main);
+  font-family: $font-family;
+  display: inline;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  letter-spacing: 0.025em;
+  @media (max-width: 400px) {
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
+.title1 {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  @media (max-width: 800px) {
+    text-align: center;
+  }
+}
+.title2 {
+  width: 100%;
+  text-align: right;
+  position: relative;
+  @media (max-width: 800px) {
+    text-align: center;
+  }
+}
+.decor2 {
+  @include decor2;
+  position: absolute;
+  top: 120px;
+  left: 170px;
+  @media screen and (max-width: 1200px) {
+    top: 30px;
+  }
+  @media screen and (max-width: $breakpointMobile) {
+    transform: rotate(180deg);
+    top: unset;
+    left: unset;
+    bottom: 50px;
+    right: 20px;
+  }
+}
+.decor4 {
+  @include decor4;
+  position: absolute;
+  top: 170px;
+  right: 470px;
+  transform: rotate(180deg);
+  @media screen and (max-width: 1400px) {
+    right: 300px;
+  }
+  @media screen and (max-width: 1200px) {
+    top: 100px;
+  }
+  @media screen and (max-width: 1000px) {
+    right: 100px;
+  }
+  @media screen and (max-width: $breakpointTablet) {
+    top: 20px;
+  }
+  @media screen and (max-width: $breakpointMobile) {
+    top: 33px;
+    right: unset;
+    left: 75px;
+  }
+}
+.decor3 {
+  @include decor3;
+  position: absolute;
+  right: 170px;
+  top: 620px;
+  transform: rotate(90deg);
+  @media screen and (max-width: 1200px) {
+    top: 350px;
+  }
+  @media screen and (max-width: 872px) {
+    top: 420px;
+  }
+  @media screen and (max-width: $breakpointTablet) {
+    top: 250px;
+  }
+  @media screen and (max-width: $breakpointMobile) {
+    right: unset;
+    top: unset;
+    left: 12px;
+    bottom: 80px;
+  }
+}
+.decor5 {
+  @include decor5;
+  position: absolute;
+  left: 540px;
+  bottom: 310px;
+  @media screen and (max-width: 1200px) {
+    bottom: 120px;
+  }
+  @media screen and (max-width: 1000px) {
+    left: 200px;
+  }
+  @media screen and (max-width: $breakpointMobile) {
+    display: none;
+  }
+}

@@ -1,0 +1,73 @@
+@import '../../styles/globalVariables.scss';
+
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colHead {
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $black;
+  max-width: 236px;
+  margin: 0;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  @media (max-width: 963px) {
+    min-height: 70px;
+  }
+  @media (max-width: 700px) {
+    min-height: unset;
+  }
+}
+
+.disabled {
+  border-color: rgb(128, 120, 120);
+  color: rgb(128, 120, 120);
+  pointer-events: none;
+  opacity: 70%;
+}
+.heading {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+.searchBtn {
+  @include clickable;
+  width: 40px;
+  height: 40px;
+  background-color: $dark-blue-extra;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  @include button(weak);
+  // transform: scale(50%);
+  // width: 30%;
+  // margin: -10px -7.5% -20px;
+  // display: none;
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
+}
+.red {
+  color: $red-extra;
+  border-color: $red-extra;
+}
+.disabled {
+  border-color: rgb(128, 120, 120);
+  color: rgb(128, 120, 120);
+  pointer-events: none;
+  opacity: 70%;
+}

@@ -1,0 +1,94 @@
+@import '../../styles/globalVariables.scss';
+
+.section {
+  @include section;
+  padding-top: 122px;
+  padding-bottom: 221px;
+  @media (max-width: 800px) {
+    padding-top: 41px;
+    padding-bottom: 74px;
+  }
+}
+.wrapper {
+  @include wrapper($white);
+}
+.title {
+  @include title($blue-main);
+  @media (max-width: 600px) {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  @media (max-width: 600px) {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  @media (max-width: 356px) {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+.container {
+  margin-top: 91px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  @media (max-width: 800px) {
+    margin-top: 49px;
+    padding: 0 11px;
+    gap: 38px;
+  }
+}
+@mixin item($color) {
+  margin: 0;
+  padding-bottom: 8px;
+  font-family: $font-family;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  max-width: 776px;
+  border-bottom: 6px solid $color;
+  text-transform: uppercase;
+  position: relative;
+  @media (max-width: 800px) {
+    font-size: 20px;
+    line-height: 24px;
+    align-self: start;
+    border-bottom-width: 2px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: $color;
+    top: -24px;
+    left: -24px;
+    @media (max-width: 800px) {
+      width: 11px;
+      height: 11px;
+      top: -11px;
+      left: -11px;
+    }
+  }
+  @media (max-screeen: 800px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.itemblue {
+  @include item($blue-main);
+  align-self: start;
+}
+.itemred {
+  @include item($red-extra);
+  align-self: center;
+}
+.itempurple {
+  @include item($dark-blue-extra);
+  align-self: end;
+}

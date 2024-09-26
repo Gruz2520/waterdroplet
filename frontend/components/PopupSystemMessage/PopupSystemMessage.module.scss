@@ -1,0 +1,128 @@
+@import '../../styles/globalVariables.scss';
+
+@keyframes statusBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.popup {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 57px;
+  right: 64px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s ease, transform 1s ease;
+  @media screen and (max-width: $breakpointMobile) {
+    right: 50px;
+  }
+  @media (max-width: 400px) {
+    right: 30px;
+  }
+  @media (max-width: 350px) {
+    right: 15px;
+  }
+}
+
+.active {
+  opacity: 100%;
+  transform: scale(100%);
+  .bar {
+    height: 39px;
+    background-color: #494dbb;
+    width: 100%;
+    animation: statusBar 3s linear;
+    @media screen and (max-width: $breakpointTablet) {
+      height: 30px;
+    }
+    @media screen and (max-width: $breakpointMobile) {
+      height: 20px;
+    }
+  }
+}
+.container {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  box-sizing: border-box;
+  width: 384px;
+  background-color: $blue-main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: auto;
+  position: relative;
+  border: 2px solid #fff;
+  @media screen and (max-width: $breakpointDesktop) {
+    width: 300px;
+  }
+
+  &::after {
+    content: '';
+    @include decorSizeS;
+    background-color: $red-extra;
+    position: absolute;
+    right: -$decorSmall;
+    bottom: -$decorSmall;
+    @media screen and (max-width: $breakpointDesktop) {
+      right: -$decorSmallTab;
+      bottom: -$decorSmallTab;
+    }
+    @media screen and (max-width: $breakpointTablet) {
+      right: -$decorSmallMob;
+      bottom: -$decorSmallMob;
+    }
+  }
+}
+
+.text {
+  margin: 0;
+  font-family: $font-family;
+  padding: 20px 20px 8px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 35px;
+  background-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (max-width: $breakpointDesktop) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @media (max-width: $breakpointMobile) {
+    padding: 15px 15px 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.close-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -40px;
+  top: -40px;
+  cursor: pointer;
+  pointer-events: none;
+  @media (max-width: 600px) {
+    right: -10px;
+  }
+}
+.close-icon {
+  width: 100%;
+}

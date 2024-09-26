@@ -1,0 +1,50 @@
+@import '../../styles/globalVariables.scss';
+.section {
+  @include section;
+  color: $blue-main;
+  position: static;
+}
+.wrapper {
+  @include wrapper($white);
+}
+.title {
+  margin: 0;
+  background-color: $blue-main;
+  color: $white;
+  padding: 19px 0;
+  text-align: center !important;
+  font-family: $font-family;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  text-align: left;
+  text-transform: uppercase;
+  @media (max-width: 1200px) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  @media (max-width: 700px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  @media (max-width: 500px) {
+    letter-spacing: -0.04em;
+  }
+}
+.columns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 31px;
+  @media (max-width: 800px) {
+    gap: 20px;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 2fr 1fr;
+    gap: 7px;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}

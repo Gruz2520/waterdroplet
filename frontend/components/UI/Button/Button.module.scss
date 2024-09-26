@@ -1,0 +1,39 @@
+@import '../../../styles/globalVariables.scss';
+.redBkg {
+  background-color: $red-extra;
+}
+.yellowBkg {
+  background-color: $yellow-extra;
+}
+.greenBkg {
+  background-color: $green-extra;
+}
+.blueBkg {
+  background-color: $blue-extra;
+}
+
+.whiteText {
+  background-color: $white;
+}
+.blackText {
+  background-color: $black;
+}
+
+.primary {
+  padding: 0;
+}
+
+.admin {
+  @include clickable;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 800px) {
+    width: 30px;
+    height: 30px;
+  }
+}

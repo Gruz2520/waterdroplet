@@ -1,0 +1,118 @@
+@import '../../styles/globalVariables.scss';
+
+.section {
+  @include section;
+  padding-bottom: 85px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: flex-start;
+  @media screen and (max-width: 800px) {
+    padding-bottom: 49px;
+    gap: 15px;
+  }
+}
+.title {
+  @include titleSmall($blue-main);
+}
+.wrapper {
+  @include wrapper($white);
+}
+.schemeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 121px;
+  @media screen and (max-width: 1100px) {
+    gap: 100px;
+  }
+  @media screen and (max-width: 700px) {
+    gap: 49px;
+  }
+}
+.schemeItem {
+  @include button(strong);
+  pointer-events: none;
+  max-width: 489px;
+  margin: 0;
+  position: relative;
+  @media screen and (max-width: 1100px) {
+    &::before {
+      content: '';
+      width: 2px;
+      background-color: $blue-main;
+      position: absolute;
+      top: -102px;
+      height: 100px;
+      left: 50%;
+      @media screen and (max-width: 700px) {
+        top: -52px;
+        height: 50px;
+      }
+    }
+  }
+}
+@mixin arrow {
+  position: absolute;
+  content: '';
+  border-top: 2px solid $blue-main;
+  top: 38px;
+  width: 145px;
+  height: 163px;
+}
+.itemWide {
+  max-width: 748px;
+  position: relative;
+  &::before {
+    @include arrow;
+    border-left: 2px solid $blue-main;
+    left: -147px;
+    @media screen and (max-width: 1500px) {
+      width: 50px;
+      left: -48px;
+    }
+    @media screen and (max-width: 1100px) {
+      display: none;
+    }
+  }
+  &::after {
+    @include arrow;
+    right: -147px;
+    border-right: 2px solid $blue-main;
+    @media screen and (max-width: 1500px) {
+      width: 50px;
+      right: -48px;
+    }
+    @media screen and (max-width: 1100px) {
+      display: none;
+    }
+  }
+}
+.schemeRow {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.code {
+  @include cell;
+  padding-top: 40px;
+  text-align: left;
+  border-radius: 20px;
+  max-width: 492px;
+  align-self: center;
+  margin-top: 34px;
+  background-color: $codeHighlightBkg;
+  width: 36%;
+  @media screen and (max-width: 1000px) {
+    padding-top: 40px;
+    width: 65%;
+  }
+  @media screen and (max-width: 500px) {
+    padding-top: 27px;
+  }
+}
+.langTag {
+  @include langTag;
+}

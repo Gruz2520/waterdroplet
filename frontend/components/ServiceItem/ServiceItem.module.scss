@@ -1,0 +1,63 @@
+@import '../../styles/globalVariables.scss';
+.item {
+  width: 100%;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  border-bottom: 1px solid $blue-main;
+  @media (max-width: 600px) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+.adminPanel {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 20px);
+  display: none;
+  gap: 15px;
+  @media screen and (max-width: 700px) {
+    gap: 10px;
+    right: calc(50% - 35px);
+  }
+}
+.shown {
+  display: flex;
+}
+@mixin itemText($pl, $pr, $a) {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 48px $pr 48px $pl;
+  text-align: $a !important;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  color: $black;
+  @media (max-width: 1000px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  @media (max-width: 700px) {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.itemName {
+  @include itemText(82px, 16px, left);
+  @media (max-width: 1200px) {
+    padding-left: 40px;
+  }
+  @media (max-width: 600px) {
+    padding-left: 4px;
+    width: 70%;
+  }
+}
+.itemPrice {
+  @include itemText(16px, 0, center);
+}
+.hidden {
+  display: none !important;
+}

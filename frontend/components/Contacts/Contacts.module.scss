@@ -1,0 +1,86 @@
+@import '../../styles/globalVariables.scss';
+.section {
+  @include section;
+  color: $blue-main;
+  padding: 135px 78px 146px;
+  gap: 94px;
+  @media (max-width: 1000px) {
+    padding: 92px 78px 80px;
+  }
+  @media (max-width: 600px) {
+    gap: 35px;
+    padding: 92px 30px 80px;
+  }
+}
+.wrapper {
+  @include wrapper($white);
+}
+.item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 104px;
+  position: relative;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  @media (max-width: 600px) {
+    gap: 24px;
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 24px;
+    top: -24px;
+    left: -24px;
+    background-color: $red-extra;
+    @media (max-width: 600px) {
+      width: 11px;
+      height: 11px;
+      top: -11px;
+      left: -11px;
+    }
+  }
+}
+.itemColumn {
+  padding-bottom: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 6px solid $red-extra;
+  justify-content: flex-end;
+  @media (max-width: 1000px) {
+    border-bottom-width: 2px;
+  }
+}
+
+.itemText {
+  margin: 0;
+  text-transform: uppercase;
+  color: $black;
+  font-family: $font-family;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  max-width: 869px;
+  @media (max-width: 1200px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.itemText_narrow {
+  max-width: 520px;
+}

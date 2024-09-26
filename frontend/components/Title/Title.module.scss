@@ -1,0 +1,60 @@
+@import '../../styles/globalVariables.scss';
+.titleBlock {
+  @include section;
+  max-width: 800px;
+  padding-top: 94px;
+  padding-bottom: 180px;
+  box-sizing: border-box;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+.titleWrapper {
+  width: 100%;
+  background-color: $blue-main;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+.title {
+  @include title($white);
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+.row2 {
+  width: 100%;
+  text-align: right;
+}
+.row4 {
+  width: 100%;
+  text-align: right;
+  padding-right: 4%;
+  box-sizing: border-box;
+}
+.row5 {
+  width: 100%;
+  text-align: right;
+  padding-right: 13%;
+  box-sizing: border-box;
+}
+.cube1 {
+  @include decor6;
+  bottom: 15px;
+  // margin-bottom:6px;
+  margin-left: 28%;
+  @media (max-width: 1300px) {
+    left: 50px;
+  }
+}
+.cube2 {
+  @include decor7;
+  left: 130px;
+  top: 90px;
+  @media (max-width: 1300px) {
+  }
+}

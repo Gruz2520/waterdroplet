@@ -1,0 +1,162 @@
+@import '../../styles/globalVariables.scss';
+$formScale: 0.8;
+.wrapper {
+  position: relative;
+  @include wrapper($white);
+  z-index: 3;
+}
+.type {
+  @include button(weak);
+  margin: 0;
+  pointer-events: none;
+}
+.btnContainer {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  @media screen and (max-width: $breakpointMobile) {
+    gap: 10px;
+  }
+}
+.link {
+  @include button(weak);
+}
+.account {
+  @include section;
+  min-height: calc(100vh - 97px);
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+
+  @media screen and (max-width: 1500px) {
+    min-height: calc(100vh - 79px);
+  }
+  @media screen and (max-width: 1000px) {
+    padding-top: 86px;
+    padding-bottom: 115px;
+    min-height: calc(100vh - 89px);
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+.fullHeight {
+  height: 100vh;
+}
+.msg {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  text-align: center;
+  font-family: $font-family;
+  font-size: 30px;
+  line-height: 1.2;
+  background-color: $red-extra;
+  color: #fff;
+  @media screen and (max-width: $breakpointTablet) {
+    font-size: 24px;
+    padding: 20px;
+  }
+  @media screen and (max-width: $breakpointMobile) {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+.form {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 35px;
+  max-width: 748px;
+  transform: scale($formScale);
+  @media screen and (max-width: $breakpointMobile) {
+    transform: none;
+    padding-top: 40px;
+  }
+}
+
+.button {
+  @include button(strong);
+  transition: background-color 0.5s ease;
+}
+.buttonWeak {
+  @include button(weak);
+}
+.static {
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+}
+.input {
+  @include input($blue-main);
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 0;
+  font-size: 18px;
+  color: $black;
+  &::placeholder {
+    color: #c7c7c7;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: none;
+  }
+}
+.inactiveBtn {
+  // opacity: 50%;
+  pointer-events: none;
+  background-color: #c7c7c7;
+  border: none;
+}
+.error {
+  margin: 0;
+  color: red;
+  font-size: 16px;
+  line-height: 1;
+  min-height: 16px;
+  margin-bottom: -26px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.logoutBtn {
+  @include button(strong);
+  position: absolute;
+  top: 45px;
+  right: 64px;
+  width: 234px;
+  transform: scale($formScale);
+  @media screen and (max-width: $breakpointTablet) {
+    width: 160px;
+  }
+  @media screen and (max-width: $breakpointMobile) {
+    transform: none;
+    width: 100px;
+    top: 30px;
+    right: 30px;
+  }
+  &::after {
+    content: '';
+    @include decorSizeS;
+    position: absolute;
+    background-color: $red-extra;
+    top: -$decorSmall;
+    right: -$decorSmall;
+    @media screen and (max-width: $breakpointDesktop) {
+      top: -$decorSmallTab;
+      right: -$decorSmallTab;
+    }
+    @media screen and (max-width: $breakpointTablet) {
+      top: -$decorSmallMob;
+      right: -$decorSmallMob;
+    }
+  }
+}

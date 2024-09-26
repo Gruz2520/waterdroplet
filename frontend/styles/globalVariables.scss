@@ -1,0 +1,446 @@
+$blue-main: #286ae2;
+$blue-hover: #a8bfeb;
+$light-main: #f5f5f5;
+$white: #fff;
+$red-extra: #ff296b;
+$green-extra: #19f320;
+$yellow-extra: #f9f909;
+$blue-extra: #1e5edc;
+$dark-blue-extra: #494dbb;
+$purple-extra: #9f2977;
+$black: #000;
+$grey: #1e1e1f;
+$transition-duration: 0.5s;
+$codeHighlightBkg: #2d2828;
+$blue-main-transparent: #286ae210;
+$fade: #a6a0a0;
+
+$font-family: 'Mont';
+
+$decorBig: 75px;
+$decorBigTab: 50px;
+$decorBigMob: 25px;
+$decorSmall: 24px;
+$decorSmallTab: 16px;
+$decorSmallMob: 8px;
+
+$breakpointDesktop: 1300px;
+$breakpointTablet: 800px;
+$breakpointMobile: 675px;
+$breakpointMobileSmall: 500px;
+
+@mixin decorSizeL {
+  width: $decorBig;
+  height: $decorBig;
+  position: relative;
+  @media screen and (max-width: $breakpointDesktop) {
+    width: $decorBigTab;
+    height: $decorBigTab;
+  }
+
+  @media screen and (max-width: $breakpointTablet) {
+    width: $decorBigMob;
+    height: $decorBigMob;
+  }
+}
+@mixin decorSizeS {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  @media screen and (max-width: $breakpointDesktop) {
+    width: $decorSmallTab;
+    height: $decorSmallTab;
+  }
+
+  @media screen and (max-width: $breakpointTablet) {
+    width: $decorSmallMob;
+    height: $decorSmallMob;
+  }
+}
+
+@mixin photoRule {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    bottom: -75px;
+    right: -75px;
+    background-color: $red-extra;
+    @media (max-width: 1200px) {
+      width: 50px;
+      height: 50px;
+      bottom: -50px;
+      right: -50px;
+    }
+    @media (max-width: 1000px) {
+      width: 27px;
+      height: 27px;
+      bottom: -27px;
+      right: -27px;
+    }
+  }
+}
+@mixin title($color) {
+  margin: 0;
+  color: $color;
+  font-family: $font-family;
+  font-size: 6em;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+  text-align: left;
+  text-transform: uppercase;
+  font-style: italic;
+  @media (max-width: 1500px) {
+    font-size: 80px;
+    line-height: 90px;
+  }
+  @media (max-width: $breakpointDesktop) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  @media (max-width: $breakpointTablet) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  @media (max-width: $breakpointMobile) {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  @media (max-width: 360px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@mixin section {
+  width: 100%;
+  max-width: 1600px;
+  background-color: transparent;
+  margin: 0;
+  padding: 0 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  @media (max-width: $breakpointTablet) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@mixin wrapper($color) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: ($color);
+}
+@mixin clickable {
+  cursor: pointer;
+  transition: opacity $transition-duration ease;
+  &:hover {
+    opacity: 50%;
+    @media screen and (hover: none) {
+      opacity: 100%;
+    }
+  }
+}
+
+@mixin button($type) {
+  @include clickable();
+  box-sizing: border-box;
+  width: 100%;
+  padding: 19px 10px;
+  border: 2px solid $blue-main;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-align: center;
+  font-family: $font-family;
+  text-decoration: none;
+  transition: background-color 0.3s linear, opacity 0.5s ease;
+  cursor: pointer;
+  // &:hover {
+  //   background-color: $blue-hover;
+  // }
+  @if $type == weak {
+    color: $blue-main;
+    background-color: transparent;
+  }
+  @if $type == strong {
+    color: $white;
+    background-color: $blue-main;
+  }
+  text-transform: uppercase;
+  @media (max-width: 1200px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  @media (max-width: $breakpointTablet) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  @media (max-width: $breakpointMobile) {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 9px 0;
+  }
+}
+@mixin input($color) {
+  @include clickable;
+  font-family: $font-family;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  padding: 20px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $color;
+  color: $color;
+  background-color: transparent;
+  &::placeholder {
+    color: inherit;
+    transition: opacity $transition-duration ease;
+  }
+  &:focus {
+    border-bottom-width: 4px;
+    @media (max-width: $breakpointTablet) {
+      border-bottom-width: 3px;
+    }
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+  @media (max-width: $breakpointMobile) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  @media (max-width: 500px) {
+    padding: 0;
+  }
+}
+@mixin titleSmall($color) {
+  @include title($color);
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0.025em;
+  @media (max-width: 1500px) {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  @media (max-width: $breakpointDesktop) {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  @media (max-width: $breakpointTablet) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @media (max-width: $breakpointMobile) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  @media (max-width: 360px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@mixin text($color) {
+  margin: 0;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $color;
+  word-wrap: break-word;
+  @media screen and (max-width: $breakpointDesktop) {
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: -0.035em;
+  }
+  @media screen and (max-width: 1060px) {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.035em;
+  }
+}
+@mixin cell {
+  @include text($black);
+  padding: 27px 39px;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  @media screen and (max-width: 1000px) {
+    padding: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 6px 14px;
+  }
+}
+
+@mixin outlined($color) {
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin langTag {
+  box-sizing: border-box;
+  padding: 10px 30px;
+  font-family: Arial;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #6f6f6f;
+  display: flex;
+  align-items: center;
+  .class {
+    color: red($color: #000000);
+  }
+  span {
+    font-size: 14px;
+    line-height: 1;
+    color: #e1dcdc;
+    border-bottom: 4px solid #8c3b9b;
+    @media screen and (max-width: $breakpointTablet) {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: $breakpointTablet) {
+    padding: 5px 30px;
+  }
+}
+
+@mixin decor1 {
+  @include decorSizeS;
+  background-color: $blue-main;
+  position: relative;
+}
+@mixin decor2 {
+  @include decorSizeL;
+  background-color: $blue-extra;
+  position: relative;
+  &::before {
+    content: '';
+    @include decorSizeS;
+    background-color: $blue-main;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+  }
+  &::after {
+    content: '';
+    @include decorSizeL;
+    background-color: $red-extra;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+  }
+}
+@mixin decor3 {
+  @include decorSizeL;
+  background-color: $blue-extra;
+  position: relative;
+  top: 202px;
+  right: 50px;
+  &::before {
+    content: '';
+    @include decorSizeL;
+    background-color: $purple-extra;
+    position: absolute;
+    right: 100%;
+    bottom: 100%;
+  }
+  &::after {
+    content: '';
+    @include decorSizeS;
+    background-color: $blue-main;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+  }
+}
+@mixin decor4 {
+  position: relative;
+  @include decorSizeL;
+  background-color: $dark-blue-extra;
+  &::after {
+    content: '';
+    @include decorSizeL;
+    background-color: $red-extra;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+  }
+}
+@mixin decor5 {
+  position: relative;
+  @include decorSizeL;
+  background-color: $red-extra;
+  &::after {
+    content: '';
+    @include decorSizeS;
+    background-color: $blue-main;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+  }
+}
+@mixin decor6 {
+  @include decorSizeL;
+  background-color: $white;
+  position: relative;
+  &::before {
+    content: '';
+    @include decorSizeS;
+    background-color: #c01a5c;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+  }
+  &::after {
+    content: '';
+    @include decorSizeL;
+    background-color: $purple-extra;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+  }
+}
+@mixin decor7 {
+  @include decorSizeL;
+  background-color: $red-extra;
+  position: relative;
+  &::before {
+    content: '';
+    @include decorSizeL;
+    background-color: $purple-extra;
+    position: absolute;
+    right: 100%;
+    bottom: 100%;
+  }
+  &::after {
+    content: '';
+    @include decorSizeS;
+    background-color: $white;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+  }
+}

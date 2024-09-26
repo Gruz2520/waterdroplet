@@ -1,0 +1,22 @@
+from pyzbar import pyzbar
+import cv2
+import numpy
+
+
+def scanQR(content) -> str:
+    """
+    :param content: File
+    :return: decrypted info from QR
+    """
+    nparr = numpy.frombuffer(content, numpy.uint8)
+    all_data = []
+    img = cv2.imdecode(nparr, cv2.IMREAD_GRAYSCALE)
+    qrcodes = pyzbar.decode(img)
+    for qrcode in qrcodes:
+        qrcodeData = qrcode.data.decode('utf-8')
+        if qrcode.type == "QRCODE":
+            all_data.append(qrcodeData.split('&')[0])
+    try:
+        return all_data[0]
+    except IndexError:
+        return ''

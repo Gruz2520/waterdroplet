@@ -1,0 +1,41 @@
+{
+  "extends": "next",
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
+  }
+}
+
+// {
+//   "root": true,
+//   "parser": "@typescript-eslint/parser",
+//   "plugins": ["@typescript-eslint"],
+//   "extends": [
+//     "eslint:recommended",
+//     "plugin:@typescript-eslint/recommended",
+//     "plugin:@typescript-eslint/eslint-recommended"
+//   ],
+//   "rules": {
+//     "semi": "off",
+//     "@typescript-eslint/semi": ["error"],
+//     "@typescript-eslint/no-empty-interface": [
+//       "error",
+//       {
+//         "allowSingleExtends": true
+//       }
+//     ],
+//     "@typescript-eslint/strict-boolean-expressions": [
+//       2,
+//       {
+//         "allowString": true,
+//         "allowNumber": true
+//       }
+//     ]
+//   },
+//   "parserOptions": { "project": ["./tsconfig.json"] },
+//   "ignorePatterns": [
+//     "src/**/*.test.ts",
+//     "src/frontend/generated/*",
+//     "next.config.js"
+//   ]
+// }

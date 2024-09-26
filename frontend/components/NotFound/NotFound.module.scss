@@ -1,0 +1,37 @@
+@import '../../styles/globalVariables.scss';
+
+.page {
+  @include wrapper($blue-main);
+}
+.container {
+  height: 100vh;
+  display: flex;
+  max-width: 700px;
+  width: 70%;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: $breakpointMobile) {
+    width: 90%;
+  }
+}
+.text {
+  @include titleSmall($white);
+  text-align: center;
+}
+.link {
+  font-family: $font-family;
+  color: $red-extra;
+  font-size: 32px;
+  text-decoration: none;
+  padding: 0;
+  font-weight: 700;
+  border-bottom: 2px solid $red-extra;
+  @media screen and (max-width: $breakpointTablet) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: $breakpointMobile) {
+    font-size: 18px;
+  }
+}

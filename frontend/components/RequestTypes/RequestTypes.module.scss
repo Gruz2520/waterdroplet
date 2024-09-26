@@ -1,0 +1,26 @@
+@import '../../styles/globalVariables.scss';
+
+.section {
+  @include section;
+  padding-bottom: 110px;
+  gap: 65px;
+  @media screen and (max-width: 800px) {
+    gap: 38px;
+    padding-bottom: 44px;
+  }
+}
+.wrapper {
+  @include wrapper($white);
+}
+.title {
+  @include titleSmall($blue-main);
+  margin-bottom: -20px;
+}
+.errors {
+  width: 100%;
+  border: 1px solid $blue-main;
+}
+.error {
+  @include cell;
+  @include outlined($blue-main);
+}

@@ -1,16 +1,16 @@
 ## Intro
-"КАПЛЯ" позволяет жителям домов, использующих услуги "КАПЛИ", снимать показания счетчиков с помощью фотографии и моментально получить счет для оплаты услуг водоснабжения. Необходимы сотрудники, готовые проверять истинные показания счетчиков. Эта необходимость появлялась при сомнительном/нелогичном изменении показаний счетчика относительно старых. Такая проверка предоставляется "КАПЛЕЙ".
+‘Waterdroplet’ allows residents of homes using ‘Waterdroplet’ services to take meter readings via photo and instantly receive a bill to pay for water service. There is a need for staff willing to verify true meter readings. This need has arisen when there is a questionable/unlogical change in meter readings relative to old readings. Such verification is provided by the ‘Waterdroplet’.
 
-## Realization
+## Realisation
 
-Была разработана микросервисная архитектура с регулировщиком нагрузки и изменением количеством ресурсов. 
+A microservice architecture with load balancer and resource quantity modification was developed. 
 
-Кросс-платформенное приложение с возможностью обмена информации с серверной частью.
+A cross-platform application with the ability to exchange information with the server side.
 
-YOLO-подобная модель для определения показателей счетчиков по фотографии вне зависимости от освещения или же других осложняющих факторов. Была доработана архитектура увеличением показателей drop-out слоев, регулировкой сверток и увеличением полносвязных слоев.
+A YOLO-like model for determining meter readings from a photograph regardless of lighting or other complicating factors. The architecture has been refined by increasing drop-out layer metrics, adjusting convolutions, and increasing fully-connected layers.
 
 ### Rep:
-- [api_ml](api_ml) папка с реализацией простой API для доступа к моделе и самой моделью
-- [backend](backend) папка с полной реализацией объединенного backend как для сайта, так и для кросс-платформенного приложения
-- [frontend](frontend) полный фронт для сайта 
-- [mobile_dart_app](mobile_dart_app) реализация кросс-платформенного приложения для фотографий и связи с моделью
+- [api_ml](api_ml) folder with an implementation of a simple API for accessing the model and the model itself
+- [backend](backend) folder with a full implementation of a unified backend for both the site and cross-platform application
+- [frontend](frontend) full frontend for the site 
+- [mobile_dart_app](mobile_dart_app) implementation of cross-platform app for photos and communication with the model
